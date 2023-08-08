@@ -1,7 +1,7 @@
 <?php
 
 # Initialize the session
-session_start();
+# session_start();
 
 # Check if the session has a last activity time
 if (isset($_SESSION['last_activity'])) {

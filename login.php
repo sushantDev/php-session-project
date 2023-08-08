@@ -58,8 +58,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
               # Store data in session variables
               $_SESSION["id"] = $id;
               $_SESSION["username"] = $username;
-              $_SESSION["loggedin"] = TRUE;
+              $_SESSION["loggedin"] = true;
               $_SESSION['last_login_time'] = time();
+              $_SESSION['darkMode'] = true;
+              $_SESSION['nepaliMode'] = true;
+              $_SESSION['fontSize'] = 18;
 
               # Redirect user to index page
               echo "<script>" . "window.location.href='./'" . "</script>";
@@ -130,6 +133,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <div class="mb-3 form-check">
               <input type="checkbox" class="form-check-input" id="togglePassword">
               <label for="togglePassword" class="form-check-label">Show Password</label>
+              <p class="mb-2 text-end"><a href="./forgot_password.php">Forgot Password</a></p>
             </div>
             <div class="mb-3">
               <input type="submit" class="btn btn-primary form-control" name="submit" value="Log In">
